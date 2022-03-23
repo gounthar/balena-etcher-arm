@@ -10,3 +10,8 @@ RUN apt update && \
   git clone --recursive https://github.com/balena-io/etcher && \
   cd etcher && \
   git checkout v1.7.8 # latest version available 2022/03/21
+
+ADD etcher-build/build.sh /sbin
+
+ENTRYPOINT ["/sbin/build.sh"]
+CMD ["pwd"]
