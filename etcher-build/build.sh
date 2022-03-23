@@ -9,7 +9,7 @@ pip install -r requirements.txt && \
 USE_SYSTEM_FPM="true" make electron-build && \
 #  *.deb package will be in /etcher/dist/* && \
 # filename will depend on which release version was checked out && \
-sudo apt-get install ./dist/balena-etcher-electron_*.deb 
+# apt-get install ./dist/balena-etcher-electron_*.deb 
 
 # https://stackoverflow.com/a/60487804/2938320
 exec "$@"
