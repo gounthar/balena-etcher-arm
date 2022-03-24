@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ~/etcher
-pip install -r requirements.txt && \
+pip3 install -r requirements.txt && \
   make electron-develop && \
   # restrict output to .deb package only to save build time && \
   sed -i 's/TARGETS="deb rpm appimage"/TARGETS="deb"/g' scripts/resin/electron/build.sh && \
