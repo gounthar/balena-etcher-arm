@@ -1,6 +1,7 @@
 # I took everything from the build instructions found there: https://github.com/futurejones/balena-etcher-arm/blob/main/etcher-build/README.md
-FROM debian
+FROM debian:buster
 
+RUN apt update && apt install libseccomp2
 RUN apt update && \
   apt-get install -y git curl python gcc g++ make libx11-dev libxkbfile-dev \
    fakeroot rpm libsecret-1-dev jq python2.7-dev python3-pip python-setuptools \
@@ -16,7 +17,7 @@ WORKDIR /home/etching
 
 RUN addgroup --system solution && adduser --system etching --ingroup solution && \
   mkdir -p /home/etching/ && chown -R etching:solution /home/etching
-  
+
 ADD etcher-build/build.sh /sbin
 
 # USER etching:solution
