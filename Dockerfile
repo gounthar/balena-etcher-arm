@@ -2,7 +2,9 @@
 FROM debian
 
 RUN apt update && \
-  apt-get install -y git curl python gcc g++ make libx11-dev libxkbfile-dev fakeroot rpm libsecret-1-dev jq python2.7-dev python3-pip python-setuptools libudev-dev ruby-dev && \
+  apt-get install -y git curl python gcc g++ make libx11-dev libxkbfile-dev \
+   fakeroot rpm libsecret-1-dev jq python2.7-dev python3-pip python-setuptools \
+   libudev-dev ruby-dev libseccomp2 && \
   gem install fpm --no-document #tested with version 1.14.1
 
 # install NodeJS && \
