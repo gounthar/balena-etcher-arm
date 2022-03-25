@@ -8,7 +8,7 @@ echo Running on $arch arch
 # npm is not installed with apt install nodejs on ppc64le
 if [ "$arch" = "ppc64le" ] || [ "$arch" = "mips64" ]
 then
-    apt install -y npm
+    apt --no-install-recommends install -y npm
 fi
 
 pip3 install -r requirements.txt && \
