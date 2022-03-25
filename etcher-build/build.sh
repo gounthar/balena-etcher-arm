@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ~/etcher
+git pull
 pip3 install -r requirements.txt && \
   make electron-develop && \
   # restrict output to .deb package only to save build time && \
