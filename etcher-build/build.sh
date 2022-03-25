@@ -2,6 +2,7 @@
 cd ~/etcher
 git pull
 arch=$(uname -m)
+echo Running on $arch arch
 if [ "$arch" = "ppc64le" ]
 then
     apt install -y npm
