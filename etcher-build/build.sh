@@ -5,8 +5,8 @@ git pull
 
 arch=$(uname -m)
 echo Running on $arch arch
-# npm is not installed with apt install nodejs on ppc64le
-if [ "$arch" = "ppc64le" ] || [ "$arch" = "mips64" ]
+# npm is not installed with apt install nodejs on ppc64le and other archs
+if [ "$arch" = "ppc64le" ] || [ "$arch" = "mips64" ] || [ "$arch" = "s390x" ]
 then
     apt --no-install-recommends install -y npm
 fi
