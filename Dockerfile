@@ -1,5 +1,5 @@
 # I took everything from the build instructions found there: https://github.com/futurejones/balena-etcher-arm/blob/main/etcher-build/README.md
-FROM debian:buster
+FROM debian:latest
 
 RUN apt update && apt install libseccomp2
 RUN apt update && \
