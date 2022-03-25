@@ -4,7 +4,7 @@ git pull
 arch=$(uname -m)
 if [ "$arch" = "ppc64le" ]
 then
-    apt install npm
+    apt install -y npm
 fi
 pip3 install -r requirements.txt && \
   make electron-develop && \
