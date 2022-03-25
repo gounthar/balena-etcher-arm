@@ -1,6 +1,11 @@
 #!/bin/bash
 cd ~/etcher
 git pull
+arch=$(uname -m)
+if [ "$arch" = "ppc64le" ]
+then
+    apt install npm
+fi
 pip3 install -r requirements.txt && \
   make electron-develop && \
   # restrict output to .deb package only to save build time && \
