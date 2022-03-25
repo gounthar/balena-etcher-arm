@@ -1,12 +1,16 @@
 #!/bin/bash
+
 cd ~/etcher
 git pull
+
 arch=$(uname -m)
 echo Running on $arch arch
+# npm is not installed with apt install nodejs on ppc64le
 if [ "$arch" = "ppc64le" ]
 then
     apt install -y npm
 fi
+
 pip3 install -r requirements.txt && \
   make electron-develop && \
   # restrict output to .deb package only to save build time && \
