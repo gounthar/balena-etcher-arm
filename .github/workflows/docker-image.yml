@@ -5,6 +5,10 @@ on:
     branches: [ docker-building-image ]
   pull_request:
     branches: [ docker-building-image ]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Will build everyday at 4:30 and 16:30
+    - cron:  '30 4,16 * * *'
 
 jobs:
 
