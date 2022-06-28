@@ -24,7 +24,7 @@ ADD etcher-build/build.sh /sbin
 
 RUN cd && git clone --recursive https://github.com/gounthar/etcher && \
   cd etcher && \
-  git checkout multiarch-v1.7.8 # latest version available 2022/03/21
+  git checkout multiarch-v1.7.9 # latest version available 2022/06/28
 
 ENTRYPOINT ["/sbin/build.sh"]
 CMD ["pwd"]
